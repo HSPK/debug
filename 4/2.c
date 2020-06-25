@@ -14,26 +14,22 @@ int main()
     int numbers[n];
     int i;
     int j;
-    // �������������
-    for (i = 0; i < n; i++)
-    {
+
+    for (i = 0; i < n; i++) {
         scanf("%d", &numbers[i]);
     }
-    for (i = 0; i < n; i++)
-    {
-        for (j = n - 1; j > i; j--)
-        {
-            if (numbers[j - 1] < numbers[j])
-            {
+    
+    for (i = 0; i < n; i++) {
+        for (j = n - 1; j > i; j--) {
+            if (numbers[j - 1] < numbers[j]) {
                 swap(&numbers[j - 1], &numbers[j]);
             }
         }
     }
-    for (i = 0; i < n; i++)
-    {
+
+    for (i = 0; i < n; i++) {
         printf("%d", numbers[i]);
-        if (i != n - 1)
-        {
+        if (i != n - 1) {
             printf(" ");
         }
     }
