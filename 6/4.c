@@ -20,18 +20,18 @@ int main()
     while (scanf("%s", calculate) != EOF) {
         if (calculate[0] == '+') {
             if (calculate[1] == 'r')
-                result += 4;
+                result |= 4;
             if (calculate[1] == 'w')
-                result += 2;
+                result |= 2;
             if (calculate[1] == 'x')
-                result += 1;
+                result |= 1;
         } else if (calculate[0] == '-') {
             if (calculate[1] == 'r')
-                result -= 4;
+                result &= ~4;
             if (calculate[1] == 'w')
-                result -= 2;
+                result &= ~2;
             if (calculate[1] == 'x')
-                result -= 1;
+                result &= ~1;
         }
     }
 

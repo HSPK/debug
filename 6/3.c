@@ -20,17 +20,17 @@ int main()
 
     while (scanf("%s", name) != EOF) {
         if ((name[0] == '+' && name[1] == 'r')) {
-            counter += 4;
+            counter |= 4;
         } else if ((name[0] == '+' && name[1] == 'w')) {
-            counter += 2;
+            counter |= 2;
         } else if ((name[0] == '+' && name[1] == 'x')) {
-            counter += 1;
+            counter |= 1;
         } else if ((name[0] == '-' && name[1] == 'r')) {
-            counter -= 4;
+            counter &= ~4;
         } else if ((name[0] == '-' && name[1] == 'w')) {
-            counter -= 2;
+            counter &= ~2;
         } else if ((name[0] == '-' && name[1] == 'x')) {
-            counter -= 1;
+            counter &= ~1;
         }
     }
 
