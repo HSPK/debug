@@ -34,7 +34,7 @@ int main()
         if (strcmp(temp, "+w") == 0) {
             w = 1;
         }
-        if (strcmp(temp, "-x") == 0) {
+        if (strcmp(temp, "-w") == 0) {
             w = 0;
         }
     }
