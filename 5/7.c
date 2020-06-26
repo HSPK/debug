@@ -8,7 +8,8 @@ void swap (char *b, char *c)
     strcpy(b,c);
     strcpy(c, temp);
 }
-int main() {
+int main() 
+{
     char name[20][31];
     int i;
     int j;
@@ -17,8 +18,8 @@ int main() {
         scanf("%s", name[i]);    
     }
     for (j = 0; j < m; j++) {
-        for (i = 0; i <m-j-1; i ++) {
-            if(strcmp(name[i], name[i + 1]) > 0){ 
+        for (i = 0; i <m-j-1; i++) {
+            if(strcmp(name[i], name[i + 1]) > 0) { 
                 swap(name[i], name[i + 1]);    
             }
         }

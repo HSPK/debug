@@ -16,10 +16,10 @@ int main()
     }
     for (i = 0; i < 9; i++) {
         for (j = 0; j < 9-i; j++) {
-            if (strcmp(string[j+1], string[j]) < 0){
-                strcpy(str,string[j+1]);
-                strcpy(string[j+1],string[j]);
-                strcpy(string[j],str);
+            if (strcmp(string[j+1], string[j]) < 0) {
+                strcpy(str, string[j+1]);
+                strcpy(string[j+1], string[j]);
+                strcpy(string[j], str);
             }
         }
     }
