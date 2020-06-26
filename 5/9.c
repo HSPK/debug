@@ -3,16 +3,18 @@
 int main() {
     int i,j;
     char name[10][20]={0};
-    for(i = 0,j = 0; i < 10; i++){
-        scanf("%s",&name[i][j]);
+    for(i = 0; i < 10; i++){
+        scanf("%s",name[i]);
     }
     
-    for(i = 0,j = 0; i < 9; i++){
-        if(strcmp(&name[i][j],&name[i+1][j]) > 0){
-            char temp[10];
-            strcpy(temp,&name[i][j]);
-            strcpy(&name[i][j],&name[i+1][j]);
-            strcpy(&name[i+1][j],&temp);
+    for(i = 0; i < 9; i++){
+        for(j=0;j<9-i;j++){
+            if(strcmp(name[j],name[j+1]) > 0){
+                char temp[10];
+                strcpy(temp,name[j]);
+                strcpy(name[j],name[j+1]);
+                strcpy(name[j+1],temp);
+            }
         }
     }
 

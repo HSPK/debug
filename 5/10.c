@@ -7,7 +7,7 @@ int main() {
     }
     
     for (int i = 0; i < 10; i++) {
-        for (int j = 0; j < 10 - i - 1; i++) {
+        for (int j = 0; j < 10 - i - 1; j++) {
             if (strcmp(names[j], names[j+ 1]) > 0) {
                 char temp[21];
                 strcpy(temp, names[j]);
