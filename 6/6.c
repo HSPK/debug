@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <string.h>
-
+#include <math.h>
 int main() {
     int r = 0;
     int w = 0;
@@ -17,41 +17,38 @@ int main() {
     while (scanf("%c", &input) != EOF) {
         char str[2] = "\0";
         str[0] = input;
-        if (strcmp(str, rr) == 0){
-            if (strcmp(oprator, plus)){
+        if (strcmp(str, rr) == 0) {
+            if (!strcmp(oprator, plus)) {
                 r = 1;
-            }else if (strcmp(oprator, minus)){
+            }else if (!strcmp(oprator, minus)) { 
                 r = 0;
-            }else{
+            }else {
                 r = 1;
             }
-        }else if (strcmp(str, ww) == 0){
-            if (strcmp(oprator, plus)){
+        }else if (strcmp(str, ww) == 0) {
+            if (!strcmp(oprator, plus)) {
                 w = 1;
-            }else if (strcmp(oprator, minus)){
+            }else if (!strcmp(oprator, minus)) {
                 w = 0;
-            }else{
+            }else {
                 w = 1;
             }
-        }else if(strcmp(str, xx) == 0){
-            if (strcmp(oprator, plus)){
+        }else if(strcmp(str, xx) == 0) {
+            if (!strcmp(oprator, plus)) {
                 x = 1;
-            }else if (strcmp(oprator, minus)){
+            }else if (!strcmp(oprator, minus)) {
                 x = 0;
-            }else{
+            }else {
                 x = 1;
-                
             }
-        }else if (strcmp(str, plus) == 0){
+        }else if (strcmp(str, plus) == 0) {
             oprator[0] = '+';
-        }else if (strcmp(str, minus) == 0){
+        }else if (strcmp(str, minus) == 0) {
             oprator[0] = '-';
         }
     }
     
     int output = x * pow(2,0) + w * pow(2,1) + r * pow(2,2);
     printf("%d", output);
-    
-    
     return 0;
 }
