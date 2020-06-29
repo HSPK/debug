@@ -15,13 +15,13 @@ int main() {
         }
     }
     char str[200];
-    for (i = 0; i < n-1; i++){
-        if (strlen(string[i]) > strlen(string[i+1])){
-            strcpy(str,string[i]);
-            strcpy(string[i],string[i+1]);
-            strcpy(string[i+1],str);
+    for (i = 0; i < n - 1; i++) {
+        if (strlen(string[i]) > strlen(string[i + 1])) {
+            strcpy(str, string[i]);
+            strcpy(string[i], string[i + 1]);
+            strcpy(string[i + 1], str);
         }
     }
-    printf("%s\n", string[n-1]);
+    printf("%s\n", string[n - 1]);
     return 0;
 }
