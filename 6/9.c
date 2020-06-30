@@ -72,6 +72,16 @@ int main(int argc, char *argv[])
         printf("6");
     } else if (chmod == 101) {
         printf("5");
+    } else if (chmod == 100) {
+        printf("4");
+    } else if (chmod == 10) {
+        printf("2");
+    } else if (chmod == 11) {
+        printf("3");
+    } else if (chmod == 1) {
+        printf("1");
+    } else if (chmod == 0) {
+        printf("0");
     }
 
     return 0;
