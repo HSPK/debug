@@ -2,8 +2,8 @@
 #define PI 3.14159
 int main() 
 {
-    float r;
-    float c, s;
+    double r;
+    double c, s;
     scanf("%g", &r);
     c = 2 * PI * r;
     s = PI * r *r;

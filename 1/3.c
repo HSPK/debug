@@ -4,31 +4,35 @@
 
 double bisection(int p, int q, double (*func)(int, int, double));
 double f(int p, int q, double x);
-int main() {
+int main()
+{
     int p;
     int q;
     scanf("%d%d", &p, &q);
-    printf("%.4f\n", bisection(p, q, f));
+    printf("%.4lf\n", bisection(p, q, f));
     return 0;
 }
 
-double bisection(int p, int q, double (*func)(int, int, double)) {
-	double a = 20.0;
-double b = -20.0;
+double bisection(int p, int q, double (*func)(int, int, double))
+{
+    double a = -20.0;
+    double b = 20.0;
     double m;
-    while(1){
+    while (1) {
         m = (a + b) / 2;
-double c=f(p,q,m);
-        if(c < EPSILON){
+        double c = f(p, q, m);
+        if (fabs(c) < EPSILON) {
             return m;
-        }else if(f(p,q,a) * c < 0){
+        }
+        else if ((f(p, q, a) < 0 && c > 0) || (f(p, q, a) > 0 && c < 0)) {
             b = m;
-        }else{
+        } else {
             a = m;
         }
     }
 }
 
-double f(int p, int q, double x) {
+double f(int p, int q, double x)
+{
     return p * x + q;
 }

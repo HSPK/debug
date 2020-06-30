@@ -2,6 +2,10 @@
 int main() {
     int y, m, d;
     scanf("%d-%d-%d",&y,&m,&d);
+    if (m < 0 || m > 12) {
+        printf("NO");
+        return 0;
+    }
     if (m == 2) {
         if (y % 4 == 0 && y % 100 != 0 || y % 400 == 0) {
             if (d >= 1 && d <= 29) {
