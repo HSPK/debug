@@ -7,27 +7,25 @@ int main() {
     char a[100][100]={'0'};
     char temp[100] = {'0'};
 
-    for(i = 0; i < n; i++){
-        for(j = 0; j < 100; j++){
-            if(scanf("%c",&a[i][j]) == EOF){
+    for(i = 0; i < n; i++) {
+        for(j = 0; j < 100; j++) {
+            if(scanf("%c",&a[i][j]) == EOF) {
                 break;
             }
-            if(a[i][j] == '\n' ){
+            if(a[i][j] == '\n') {
                 break;
             }
         }
     }
-    
-    for(i = 0,k = 0; i < n - 1; i++){
-        if (strlen(a[k]) > strlen(a[i+1])){
+    for(i = 0, k = 0; i < n - 1; i++) {
+        if (strlen(a[k]) > strlen(a[i + 1])) {
             strcpy(temp, a[k]);
-        }
-        else{
-            k = i+1;
-            strcpy(temp, a[k]);
+        } else {
+            strcpy(temp, a[i + 1]);
+            k = i + 1;
         }
     }
-    printf("%s",temp);
+    printf("%s", temp);
 
     return 0;
 }

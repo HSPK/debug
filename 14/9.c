@@ -5,20 +5,14 @@ int main() {
     int j;
     
     scanf ("%d", &n);
-    for (i = n; i >= 1; i-- ) {
-        for (j = i; j >= 1; j-- ) {
+    for (i = n; i >= 1; i--) {
+        for (j = i; j >= 1; j--) {
             printf("%d", j);
-                if (j != n - i -1) {
-                    printf(" ");
-                    }
+            if (j != 1) {
+                printf(" ");
             }
-            
-           
-        printf("\n");
         }
-        
-        
-
-
+        printf("\n");
+    }
     return 0;
 }

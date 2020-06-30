@@ -1,47 +1,74 @@
 #include <stdio.h>
 void add(char);
-void delete(char);
+void deletep(char);
 int rwx = 0;
-int main() {
-    //initiation
+int main() 
+{
+    //initialization
     char temp;
     scanf("%c", &temp);
-    if (temp == 'x') rwx ^= (1 << 0);
-    else if (temp == 'w') {
+    if (temp == 'x') {
+        rwx ^= (1 << 0);
+        scanf("%c", &temp);
+    } else if (temp == 'w') {
         rwx ^= (1 << 1);
         scanf("%c", &temp);
-        if (temp == 'x') rwx ^= (1 << 0);
-    }
-    else if (temp == 'r') {
+        if (temp == 'x') {
+           rwx ^= (1 << 0);
+		   scanf("%c", &temp);
+        } 
+    } else if (temp == 'r') {
         rwx ^= (1 << 2);
         scanf("%c", &temp);
-        if (temp == 'w') rwx ^= (1 << 1);
-        scanf("%c", &temp);
-        if (temp == 'x') rwx ^= (1 << 0);
+        if (temp == 'w') {
+           rwx ^= (1 << 1);
+           scanf("%c", &temp);
+           if (temp == 'x') {
+              rwx ^= (1 << 0);
+              scanf("%c", &temp);
+           }
+        } else if (temp == 'x') {
+           rwx ^= (1 << 0);
+           scanf("%c", &temp);
+        }
     }
     //modification
     while (scanf("%c", &temp) != EOF) {
-        scanf("%c", &temp);
         if (temp == '+') {
-            scanf("%c", &temp);
-            add(temp);
+           scanf("%c", &temp);
+           add(temp);
         }
         else {
-            scanf("%c", &temp);
-            delete(temp);
+           scanf("%c", &temp);
+           deletep(temp);
         }
+        scanf("%c", &temp); 
     }
     //output
     printf("%d", rwx);
     return 0;
 }
-void add(char input) {
-    if (input == 'r' && rwx / 4 != 1) rwx ^= (1 << 2);
-    else if (input == 'w' && (rwx / 2 % 2 != 1)) rwx ^= (1 << 1);
-    else if (rwx % 4 != 1) rwx ^= (1 << 0);
+void add(char input)
+{
+    if (input == 'r' && rwx / 4 != 1) {
+        rwx ^= (1 << 2);
+    }
+    else if (input == 'w' && (rwx / 2 % 2 != 1)) {
+        rwx ^= (1 << 1);
+    }
+    else if (rwx % 2 != 1) {
+        rwx ^= (1 << 0);
+    }
 }
-void delete(char input) {
-    if (input == 'r' && rwx / 4 == 1) rwx ^= (1 << 2);
-    else if (input == 'w' && (rwx / 2 % 2 == 1)) rwx ^= (1 << 1);
-    else if (rwx % 4 == 1) rwx ^= (1 << 0);
+void deletep(char input) 
+{
+    if (input == 'r' && rwx / 4 == 1) {
+        rwx ^= (1 << 2);
+    }
+    else if (input == 'w' && (rwx / 2 % 2 == 1)) {
+        rwx ^= (1 << 1);
+    }
+    else if (rwx % 2 == 1) {
+        rwx ^= (1 << 0);
+    }
 }

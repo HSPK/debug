@@ -7,7 +7,6 @@ int main() {
     int i,j;
     int tmpt;
 
-    // 读入给定的数字
     for (i = 0; i < n; i++) {
         scanf("%d", &numbers[i]);
     }
@@ -17,7 +16,7 @@ int main() {
             if (numbers[i] < numbers[j]){
                 tmpt = numbers[i];
                 numbers[i] = numbers[j];
-                numbers[j] =   tmpt;
+                numbers[j] = tmpt;
             }
         }
     }
