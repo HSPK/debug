@@ -27,7 +27,7 @@ int main(void) {
     //output
     for (int i = 0; i < m; i++) {
         for (int j = 0; j < m; j++) {
-            j != m - 1? printf("%d ", mtxC[i][j]):printf("%d", mtxC[i][j]);
+            (j != m - 1) ? printf("%d ", mtxC[i][j]):printf("%d", mtxC[i][j]);
         }
         printf("\n");
     }
