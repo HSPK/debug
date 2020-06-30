@@ -26,7 +26,7 @@ Node *circle_create(int n)
     head = temp;
     head->data = 1;
 
-    for(i = 2; i <= n; i++) {
+    for (i = 2; i <= n; i++) {
         new_node = (Node *) malloc(sizeof(Node));
         new_node->data = i;
         temp->next = new_node;
@@ -48,17 +48,17 @@ void count_off(Node *head, int n, int k, int m)
         pre = pre -> next;
     }
     if (k == 1) {
-        for(int i = 1; i < n; i++){
+        for (int i = 1; i < n; i++){
             pre = pre -> next;
         }
     } 
     int num = 0;
     
     while (num < n) {
-        if (m == 1){
+        if (m == 0) {
             if (num == n - 1) {
                 printf("%d", pre -> data);
-            }else {
+            } else {
                 printf("%d ", pre -> data);
             }
             temp = pre;

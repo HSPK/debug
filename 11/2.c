@@ -9,7 +9,7 @@ int main()
     int i, j;
     int counter = 0;
 
-    while ((input = getchar()) != '\n') {
+    while ((input = getchar()) != EOF) {
         counter++;
         arr[counter % 32] += input;
     }

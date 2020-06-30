@@ -8,8 +8,8 @@ int main()
     char n;
     int i = 1;
 
-    while ((n = getchar()) != '\n') {
-        arr[i % 32] += (int)n;
+    while ((n = getchar()) != EOF) {
+        arr[i % 32] += n;
         i++;
     }
 
@@ -17,7 +17,7 @@ int main()
     int j;
 
     for (j = 0; j < 32; j++) {
-        bits[j] = arr[31 - j] ^ ((unsigned char)arr[j] << 1);
+        bits[j] = arr[31 - j] ^ (arr[j] << 1);
     }
     for (j = 0; j < 32; j++) {
         char d = bits[j] % 85 + 34;
