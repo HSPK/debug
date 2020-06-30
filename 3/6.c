@@ -20,15 +20,16 @@ int main()
             for (int i = 0; i < m; i++) {
                 if (i == m - 1) {
                     printf("%d ", matrix[i][0]);
-                } else
-                printf("%d ", matrix[i][0]);
+                } else {
+                    printf("%d ", matrix[i][0]);
+                }
             }
         } else  if (m == 1) {
             for (int j = 0; j < n; j++) {
                 if (j == n - 1) {
                     printf("%d", matrix[0][j]);
                 } else {
-                printf("%d ", matrix[0][j]);
+                    printf("%d ", matrix[0][j]);
                 }
             }
         } else {

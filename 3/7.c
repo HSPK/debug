@@ -16,8 +16,8 @@ int main()
     scanf("%d %d", &m, &n);
     endX = m;
     endY = n;
-    for (i = 0; i < m; i++){
-        for (j = 0; j < n; j++){
+    for (i = 0; i < m; i++) {
+        for (j = 0; j < n; j++) {
             scanf("%d", &matrix[i][j]);
         }
     }
@@ -46,7 +46,7 @@ int main()
             }
         }
         if (endX > startX && startY < endY) {
-            for (j = endY - 1; j >= startY; j--){
+            for (j = endY - 1; j >= startY; j--) {
                 printf("%d", matrix[endX][j]);
                 if (j > startY || startX + 1 != endX) {
                     printf(" ");
@@ -56,7 +56,7 @@ int main()
             }
         }
         if (endX - 1 > startX && startY < endY) {
-            for (i = endX - 1; i >= startX + 1; i--){
+            for (i = endX - 1; i >= startX + 1; i--) {
                 printf("%d", matrix[i][startY]);
                 if (i > startX + 1) {
                     printf(" ");

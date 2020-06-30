@@ -40,7 +40,7 @@ int main()
         for (j = 0; j < m - 1; j++) {
             printf("%d", matrix_[0][j]);
             count++;
-            if(count < max) {
+            if (count < max) {
                 printf(" ");
             } else {
                 return 0;
@@ -58,7 +58,7 @@ int main()
         t = m;
         m = n;
         n = t-1;
-    } while(m >= 1 && n >= 1);
+    } while (m >= 1 && n >= 1);
     
     return 0;
 }
