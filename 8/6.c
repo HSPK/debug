@@ -8,7 +8,7 @@ int main()
     scanf("%d\n", &n);
     char **names;
     names = (char**)malloc(sizeof(char*)*n);
-    for(int i = 0; i < n; i++){
+    for (int i = 0; i < n; i++) {
         names[i] = (char*)malloc(sizeof(char*) * 101);
     }
     for (i = 0; i < n; i++) {
