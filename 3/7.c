@@ -58,7 +58,7 @@ int main()
         if (endX - 1 > startX && startY < endY) {
             for (i = endX - 1; i >= startX + 1; i--) {
                 printf("%d", matrix[i][startY]);
-                if (i > startX + 1) {
+                if (i > startX + 1 || endY != startY + 1) {
                     printf(" ");
                 } else {
                     return 0;
