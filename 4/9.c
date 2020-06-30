@@ -1,15 +1,17 @@
 #include <stdio.h>
 
-void swap(int *a, int *b) {
+void swap(int *a, int *b) 
+{
     int c;
-    if(*a <= *b){
+    if (*a <= *b) {
         c = *a;
         *a = *b;
         *b = c;
     }
 }
 
-int main() {
+int main() 
+{
     int n = 10;
     int m;
     int numbers[10];
@@ -19,7 +21,7 @@ int main() {
         scanf("%d", &numbers[i]);
     }
     for (i = 0; i < n; i++) {
-        for(int j = 0; j < n - 1 - i; j++) {
+        for (int j = 0; j < n - 1 - i; j++) {
             swap(&numbers[j], &numbers[j + 1]);
         }
     }
@@ -30,7 +32,5 @@ int main() {
         }
     }
     
-
-
     return 0;
 }
