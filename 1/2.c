@@ -25,8 +25,7 @@ double bisection(int p, int q, double (*func)(int, int, double))
         v3 = f(p, q, m);
         if (fabs(v3) < EPSILON) {
             return m;
-        }
-        else if ((v1 > 0 && v3 > 0) || (v1 < 0 && v3 < 0)) {
+        } else if ((v1 > 0 && v3 > 0) || (v1 < 0 && v3 < 0)) {
             a = m;
         } else {
             b = m;
