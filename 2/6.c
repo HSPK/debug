@@ -12,30 +12,30 @@ int main() {
     int nIndex;
     int j;
     
-    for(mIndex = 0; mIndex < m; mIndex++) {
-        for(nIndex = 0; nIndex < n; nIndex++) { 
+    for (mIndex = 0; mIndex < m; mIndex++) {
+        for (nIndex = 0; nIndex < n; nIndex++) { 
             scanf("%d", &matrix_a[mIndex][nIndex]);
         }
     }
-    for(nIndex = 0; nIndex < n; nIndex++) {
-        for(mIndex = 0; mIndex < m; mIndex++) {
+    for (nIndex = 0; nIndex < n; nIndex++) {
+        for (mIndex = 0; mIndex < m; mIndex++) {
             scanf("%d", &matrix_b[nIndex][mIndex]);
         }
     }
-    for(mIndex = 0; mIndex < m; mIndex++) {
-        for(nIndex = 0; nIndex < m; nIndex++) {
+    for (mIndex = 0; mIndex < m; mIndex++) {
+        for (nIndex = 0; nIndex < m; nIndex++) {
             matrix_result[mIndex][nIndex]=0; 
-            for(j = 0; j < n; j++) {
+            for (j = 0; j < n; j++) {
                 matrix_result[mIndex][nIndex] += matrix_a[mIndex][j] * matrix_b[j][nIndex];
             }
         }
     }
-    for(mIndex = 0; mIndex < m; mIndex++) {
-        for(nIndex = 0; nIndex < m; nIndex++) {
+    for (mIndex = 0; mIndex < m; mIndex++) {
+        for (nIndex = 0; nIndex < m; nIndex++) {
             printf("%d", matrix_result[mIndex][nIndex]);
-            if(nIndex == m - 1 && mIndex != m ){
+            if (nIndex == m - 1 && mIndex != m ) {
                 printf("\n");
-            }else if(mIndex != m ){
+            } else if (mIndex != m ) {
                 printf(" ");
             }
         }

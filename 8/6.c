@@ -1,14 +1,15 @@
 #include <stdio.h>
 #include <string.h>
 #include <malloc.h>
-int main() {
+int main() 
+{
     int n;
     int i, j;
     scanf("%d\n", &n);
     char **names;
     names = (char**)malloc(sizeof(char*)*n);
     for(int i = 0; i < n; i++){
-        names[i]=(char*)malloc(sizeof(char*) * 101);
+        names[i] = (char*)malloc(sizeof(char*) * 101);
     }
     for (i = 0; i < n; i++) {
         for (j = 0; j < 101; j++) {

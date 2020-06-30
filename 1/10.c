@@ -18,21 +18,17 @@ double bisection(int p, int q, double (*func)(int, int, double))
     double a = -20;
     double b = 20;
     double m = (a + b) / 2;
-    while (1){      
+    while (1) {      
         if (fabs(func(p, q, m)) < EPSILON) {
             return m;
-        }
-        else{
+        } else {
             if (func(p, q, m) * func(p, q, a) < 0) {
                 b = m;
-            }
-            else if(func(p, q, m) * func(p, q, b) < 0) {
+            } else if(func(p, q, m) * func(p, q, b) < 0) {
                 a = m;
-            }
-            else if(func(p, q, a) == 0) {
+            } else if(func(p, q, a) == 0) {
                 return a;
-            }
-            else {
+            } else {
                 return b;
             }
             m = (a + b) / 2;

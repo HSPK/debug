@@ -26,14 +26,11 @@ double bisection(int p, int q, double (*func)(int, int, double))
         fx = f(p, q, x);
         if (fa > 0 && fx > 0 || fa < 0 && fx < 0) {
             a = x;
-        }
-	else if(fa == 0){
-	    return a;
-	}
-	else if(fb == 0){
-	    return b;
-	} 
-	else{
+        } else if (fa == 0) {
+            return a;
+        } else if(fb == 0) {
+            return b;
+        } else {
             b = x;
         }
     } while (fabs(fx) >= EPSILON); 
