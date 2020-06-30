@@ -11,7 +11,7 @@ int main()
     char input;
     int j = 1;
     
-    for(int i = 0; i < 32; i++) {
+    for (int i = 0; i < 32; i++) {
         arr[i] = 0;
     }
     

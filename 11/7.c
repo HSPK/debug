@@ -1,11 +1,11 @@
 #include <stdio.h>
 #include <string.h>
-int main() {
+int main() 
+{
     char str[500], fs[33];
     int arr[32] = {0};
     int bits[32];
     int i;
-    //memset(fs, '\0', sizeof(fs));
     scanf("%s", str);
     for (i = 1; i <= strlen(str); i++) {
         arr[i % 32] += (int)str[i - 1];

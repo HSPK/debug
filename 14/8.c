@@ -7,11 +7,9 @@ int main()
     int shuru2;
     scanf("%d",&shuru);
     shuru2 = shuru;
-    for( hangshu = 1 ; hangshu <= shuru; hangshu++)
-    {
+    for( hangshu = 1 ; hangshu <= shuru; hangshu++) {
         shuru2 = shuru - hangshu + 1;
-        for(geshu = 1 ; geshu <= shuru ; geshu ++)
-        {
+        for(geshu = 1 ; geshu <= shuru ; geshu ++) {
             printf("%d",shuru2);
             if(shuru2 > 1) {
                 printf(" ");
@@ -19,7 +17,7 @@ int main()
             if(shuru2 == 1) {
                 break;
             }
-            shuru2 --;
+            shuru2--;
         }
         printf("\n");
     }
