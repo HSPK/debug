@@ -1,5 +1,5 @@
 #include<stdio.h>
-int main(){
+int main() {
     int y, m, d;
     scanf("%d-%d-%d",&y,&m,&d);
     if (m < 0 || m > 12) {

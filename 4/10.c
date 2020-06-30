@@ -1,6 +1,7 @@
 #include <stdio.h>
 
-int main() {
+int main() 
+{
     int n = 10;
     int m;
     int numbers[10];
@@ -14,9 +15,9 @@ int main() {
         scanf("%d", &numbers[i]);
     }
     for (j = 0; j < n; j++) {
-        m=j;
-        for(k = j; k < n; k++){
-            if(numbers[m] < numbers[k]){
+        m = j;
+        for (k = j; k < n; k++) {
+            if (numbers[m] < numbers[k]) {
                 m = k;
             }
         }

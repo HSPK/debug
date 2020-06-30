@@ -34,24 +34,24 @@ int main(int argc, char *argv[])
     for (i = 1; i < 10; i++) {
         if (permission[i][0] == '+') {
            if (permission[i][1] == 'r') {
-              chmod_r++;
+               chmod_r++;
            }    
            if (permission[i][1] == 'w') {
-              chmod_w++;
+               chmod_w++;
            }
            if (permission[i][1] == 'x') {
-              chmod_x++;
+               chmod_x++;
            }
         }
         if (permission[i][0] == '-') {
            if (permission[i][1] == 'r') {
-              chmod_r = 0;
+               chmod_r = 0;
            }    
         if (permission[i][1] == 'w') {
-              chmod_w = 0;
+               chmod_w = 0;
            }
         if (permission[i][1] == 'x') {
-              chmod_x = 0;
+               chmod_x = 0;
            }
        }
     }

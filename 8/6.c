@@ -7,8 +7,8 @@ int main()
     int i, j;
     scanf("%d\n", &n);
     char **names;
-    names = (char**)malloc(sizeof(char*)*n);
-    for(int i = 0; i < n; i++){
+    names = (char**)malloc(sizeof(char*) * n);
+    for (int i = 0; i < n; i++) {
         names[i] = (char*)malloc(sizeof(char*) * 101);
     }
     for (i = 0; i < n; i++) {
@@ -23,8 +23,8 @@ int main()
     
     int max = strlen(names[0]);
     int number = 0;
-    for(i = 1; i < n; i++) {
-        if(max < strlen(names[i])) {
+    for (i = 1; i < n; i++) {
+        if (max < strlen(names[i])) {
             max = strlen(names[i]);
             number = i;
         }

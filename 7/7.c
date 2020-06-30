@@ -14,11 +14,11 @@ int main()
     Month30valid = (Month == 4 || Month == 6 || Month == 9 || Month == 11) && (Date < 31);
     Month31valid = (Month == 1 || Month == 3 || Month == 5 || Month == 7 || Month == 8 || Month == 10 || Month == 12) && (Date < 32);
     Datevalid = Februaryvalid || Month30valid || Month31valid;
-    if(Date<1) {
-        Datevalid=0;
+    if(Date < 1) {
+        Datevalid = 0;
     }
     
-    if(Datevalid==1) {
+    if(Datevalid == 1) {
         printf("YES");
     }
     else {
