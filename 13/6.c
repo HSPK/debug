@@ -8,7 +8,8 @@ typedef struct node {
 Node *circle_create(int n);
 void count_off(Node *head, int n, int k, int m);
 
-int main() {
+int main() 
+{
     int n, k, m;
     scanf("%d%d%d", &n, &k, &m);
     Node *head = circle_create(n);
@@ -45,7 +46,6 @@ void count_off(Node *head, int n, int k, int m) {
         temp = temp->next;
         counter++;
     } 
-    //printf("temp->data = %d\n", temp->data);
     if (m != 1) {
         for (j = 0; j < n; j++) {
             for (i = 0; i < m - 1; i++) {
