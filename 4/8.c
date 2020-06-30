@@ -7,25 +7,25 @@ int main() {
     int i;
     int max;
     int inter;
-    // 读入给定的数字
+
     for (i = 0; i < n; i++) {
         scanf("%d", &numbers[i]);
     }
-    for(i = 0; i <= 9; i++){
-        for(m = i; m <= 9; m++){
-            max = m;
-            if(numbers[max] < numbers[m+1]){
-                max = m + 1;
+    for(i = 0; i <= 9; i++) {
+        max = i;
+        for(m = i; m <= 9; m++) {
+            if(numbers[max] < numbers[m]) {
+                max = m;
             }
         }
         inter = numbers[i];
         numbers[i] = numbers[max];
-        numbers[max] = numbers[i];
+        numbers[max] = inter;
     }
     
-    for(i = 0; i <= 9; i++){
+    for(i = 0; i <= 9; i++) {
         printf("%d", numbers[i]);
-        if(i != 9){
+        if(i != 9) {
             printf(" ");
         }
     }

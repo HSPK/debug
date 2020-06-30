@@ -17,14 +17,13 @@ int main() {
             }
         }
     }
-    
+    //strcpy(temp,a[0]);
     for(i = 0,k = 0; i < n - 1; i++){
         if (strlen(a[k]) > strlen(a[i+1])){
             strcpy(temp, a[k]);
-        }
-        else{
+        }else{
+            strcpy(temp, a[i+1]);
             k = i+1;
-            strcpy(temp, a[k]);
         }
     }
     printf("%s",temp);
