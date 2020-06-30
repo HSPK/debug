@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 int main() {
-    char str[500], fs[32];
+    char str[500], fs[33];
     int arr[32] = {0};
     int bits[32];
     int i;
@@ -14,6 +14,7 @@ int main() {
         bits[i] = arr[31 - i] ^ (arr[i] << 1);
         fs[i] = (char)(bits[i] % 85 + 34);
     }
+    fs[32] = '\0';
     printf("%s", fs);
 
     return 0;

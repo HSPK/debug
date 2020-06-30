@@ -24,7 +24,7 @@ int main()
     }
    
     for (int i = 0; i < 32; i++) {
-        bits[i] = (arr[31 - i]) ^ ((unsigned char)arr[i] << 1);
+        bits[i] = (arr[31 - i]) ^ (arr[i] << 1);
         char b = (bits[i] % 85) + 34;
         result[i] = b;
     }
