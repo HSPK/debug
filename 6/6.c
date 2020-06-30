@@ -34,7 +34,7 @@ int main()
             } else {
                 w = 1;
             }
-        } else if(strcmp(str, xx) == 0) {
+        } else if (strcmp(str, xx) == 0) {
             if (!strcmp(oprator, plus)) {
                 x = 1;
             } else if (!strcmp(oprator, minus)) {

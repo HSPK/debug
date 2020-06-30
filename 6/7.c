@@ -15,7 +15,7 @@ int main()
         scanf("%c", &temp);
         if (temp == 'x') {
            rwx ^= (1 << 0);
-		   scanf("%c", &temp);
+           scanf("%c", &temp);
         } 
     } else if (temp == 'r') {
         rwx ^= (1 << 2);
@@ -37,8 +37,7 @@ int main()
         if (temp == '+') {
            scanf("%c", &temp);
            add(temp);
-        }
-        else {
+        } else {
            scanf("%c", &temp);
            deletep(temp);
         }
@@ -52,11 +51,9 @@ void add(char input)
 {
     if (input == 'r' && rwx / 4 != 1) {
         rwx ^= (1 << 2);
-    }
-    else if (input == 'w' && (rwx / 2 % 2 != 1)) {
+    } else if (input == 'w' && (rwx / 2 % 2 != 1)) {
         rwx ^= (1 << 1);
-    }
-    else if (rwx % 2 != 1) {
+    } else if (rwx % 2 != 1) {
         rwx ^= (1 << 0);
     }
 }
@@ -64,11 +61,9 @@ void deletep(char input)
 {
     if (input == 'r' && rwx / 4 == 1) {
         rwx ^= (1 << 2);
-    }
-    else if (input == 'w' && (rwx / 2 % 2 == 1)) {
+    } else if (input == 'w' && (rwx / 2 % 2 == 1)) {
         rwx ^= (1 << 1);
-    }
-    else if (rwx % 2 == 1) {
+    } else if (rwx % 2 == 1) {
         rwx ^= (1 << 0);
     }
 }

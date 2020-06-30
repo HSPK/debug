@@ -14,7 +14,7 @@ int main()
     scanf("%s\n", pms);
     while (scanf("%s\n",change_pms[i++]) != EOF) {
         count++;
-        if(scanf("%s\n",change_pms[i++]) != EOF) { 
+        if (scanf("%s\n",change_pms[i++]) != EOF) { 
             count++;
         }
     }
