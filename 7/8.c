@@ -5,15 +5,15 @@ int main()
     scanf("%d-%d-%d", &y, &m, &d);
     if(m == 1 || m == 3 || m == 5 || m == 7 || m == 8 || m == 10 || m == 12)
     {
-        if(d<=31&&d>=1) {
+        if(d <= 31 && d >= 1) {
             printf("YES");
-        } else{
+        } else {
             printf("NO");
         }
     } else if (m != 2) {
         if (d <= 30 && d >= 1){
             printf("YES");
-        } else{
+        } else {
             printf("NO");
         }
     } else {
@@ -23,7 +23,7 @@ int main()
             } else {
                 printf("NO");
             }
-        } else{
+        } else {
             if(d <= 28 && d >= 1) {
                 printf("YES");
             } else {
